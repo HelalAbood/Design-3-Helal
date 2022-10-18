@@ -8,7 +8,7 @@
 :root { 
     --main-color: #2196d3;
     --main-color-alt: #1787e0;
-    --section-background: #acacac;
+    --section-background: #d2d2d2;
     --main-transition: 0.3s;
     --main-padding-section: 100px;
 }
@@ -529,6 +529,7 @@ background-color: var(--section-background);
     background-color: white;
     box-shadow: 0px 0px 3px 4px #63636338;
     padding: 10px 10px;
+    border-radius: 7%;
 }
 .testimonilas .contanair .box .image img{ 
     max-width: 100%;
@@ -537,7 +538,7 @@ background-color: var(--section-background);
     position: absolute;
     right: -25px;
     top: -40px;
-    border: 10px solid var(--section-background);
+    border: 12px solid var(--section-background);
 }
 .testimonilas .contanair .box .content {
     flex: 1;
@@ -586,6 +587,11 @@ background-color: var(--section-background);
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+@media (max-width: 991px) { 
+    .team-member .contanair {
+        flex-direction: column;
+    }
 }
 .team-member .contanair .box {
     position: relative;
@@ -789,10 +795,260 @@ display: none;
 }
 
 /* End Services */
+/* Start Skills */
+.skills { 
+    padding-top: var(--main-padding-section);
+    padding-bottom: var(--main-padding-section);
+    background-color: white;
+    position: relative;
+}
+.skills .contanair {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .skills .contanair img { 
+        display: none;
+    }
+}
+.skills .contanair .skills { 
+    flex: 1;
+}
+.skills .contanair .skills .skill h3 { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .contanair .skills .skill h3 span { 
+    font-size: 14px;
+    border: 1px solid #7c7c7c;
+    padding: 3px 8px;
+    border-radius: 10%;
+}
+.skills .contanair .skills .skill .progress {
+    height: 40px;
+    background-color: #eee;
+    position: relative;
+}
+.skills .contanair .skills .skill .progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 100%;
+}
+/* End Skills */
+/* Start How it works */
+.how { 
+    padding-top: var(--main-padding-section);
+    padding-bottom: var(--main-padding-section);
+    background-color: var(--section-background);
+    position: relative;
+}
+.how .contanair {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+@media (max-width: 991px) {
+    .how .contanair {
+        flex-direction: column;
+    } 
+}
+.how .contanair img.work { 
+    max-width: 100%;
+    margin-right: 100px;
+}
 
+.how .contanair .holder { 
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.how .contanair .holder .box { 
+    background-color: rgb(255 255 255 / 83%);
+    margin: 10px 0px;
+    display: flex;
+    padding: 15px 35px;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 991px) {
+    .how .contanair .holder .box { 
+        flex-direction: column;
+        text-align: center;
+    } 
+}
+.how .contanair .holder .box::before { 
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0%;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background-color: #d2d2d270;
+    transition: calc(var(--main-transition) + 0.3s);
+    z-index: -1;
+}
+.how .contanair .holder .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
 
+.how .contanair .holder .box img { 
+    width: 70px;
+    margin-right: 40px;
+    align-self: center;
+}
+.how .contanair .holder .box .text { 
+    flex: 1;
+}
+.how .contanair .holder .box .text h3 { 
+    margin: 10px 0px 0px;
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 700;
+}
+.how .contanair .holder .box .text p { 
+    color: #7b7878;
+    line-height: 1;   
+}
+/* End How it works */
+/* Start events */
+.events { 
+    padding-top: var(--main-padding-section);
+    padding-bottom: var(--main-padding-section);
+    position: relative;
+}
+.events .contanair { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+    .events .contanair { 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.events img { 
+    max-width: 450px;
+}
+.events .info { 
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+    .events .info { 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.events .info .timing { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+}
+.events .info .timing span {
+display: block;
+text-align: center;
+}
+.events .info .timing span:first-child {
+    border-bottom: 1px solid var(--main-color);
+    width: 100%;
+    font-size: 70px;
+    letter-spacing: -2px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.events .info .timing span:last-child {
+    font-size: 22px;
+    text-align: center;
+}
+.events .info .timing .unit { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--main-color);
+    padding: 10px 15px;
+    margin: 10px;
+}
+.events .info .text { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.events .info .text h2 { 
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0px 0px 10px;
+}
+.events .info p { 
+    color: #777;
+    line-height: 2;
+    text-align: center;
+    font-weight: bold;
+}
+.events .sub { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.events .sub form { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    border: 50px solid var(--section-background);
+}
+.events .sub form input:first-child { 
+    width: 80%;
+    position:absolute;
+    left: 0;
+    height: 60px;
+    background-color: var(--section-background);
+    border: none;
+}
+.events .sub form input:first-child::placeholder { 
+    transition: opacity var(--main-transition);
+}
+.events .sub form input:first-child:focus { 
+    background-color: white;
+}
+.events .sub form input:first-child:focus::placeholder { 
+    opacity: 0;
+}
+.events .sub form input:last-child { 
+    width: 20%;
+    position:absolute;
+    right: 0;
+    height: 60px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+.events .sub form input:last-child:focus { 
+    cursor: pointer;
+}
 
-
+/* End events */
 
 
 
