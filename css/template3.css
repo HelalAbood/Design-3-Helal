@@ -521,7 +521,6 @@ background-color: var(--section-background);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 80px;
-    
 }
 .testimonilas .contanair .box{ 
     display: flex;
@@ -1047,20 +1046,7 @@ text-align: center;
 .events .sub form input:last-child:focus { 
     cursor: pointer;
 }
-
 /* End events */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
