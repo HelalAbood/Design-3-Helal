@@ -1,4 +1,9 @@
 # Third--Template
-This is my third -template
+This is my third template by using HTML and CSS.
 
-I've created a lot of sections to more practice.. haven't done yet the design, working on it.
+## Please, Check out the index.html file to see the work, all the responsive of screens done correctly too.
+
+### Responsive 
+Small screens: Width: 768px 
+Medium screens: Width: 992px
+Large screens: Width: 1120px.
