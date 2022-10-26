@@ -1047,10 +1047,117 @@ text-align: center;
     cursor: pointer;
 }
 /* End events */
-
-
-
-
+/* Start Footer */
+.footer { 
+    padding-top: var(--main-padding-section);
+    padding-bottom: var(--main-padding-section);
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+.footer .contanair { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin: 0 auto;
+    color: white;
+}
+.footer .contanair .left h3 { 
+    margin: 0 0 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+.footer .contanair .left h3:hover { 
+    color: var(--main-color);
+}
+.footer .contanair .left .icons { 
+    margin: 0 0 30px;
+    min-width: 100%;
+}
+.footer .contanair .left .icons a { 
+    color: rgb(255, 230, 230);
+}
+.footer .contanair .left .icons a:hover { 
+    color: var(--main-color);
+}
+.footer .contanair .left .icons a i.youu:hover { 
+    color: red;
+}
+.footer .contanair .left .icons a i { 
+    font-size: 54px;
+    margin-right: 60px;
+}
+.footer .contanair .left p { 
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 1.5;
+    color: #ddd;
+}
+@media (max-width: 997px) { 
+    .footer .contanair .left h3,
+    .footer .contanair .left .icons,
+    .footer .contanair .left p{
+        text-align: center;
+    }
+}
+.footer .contanair .center { 
+    display: flex;
+}
+.footer .contanair .center ul { 
+    min-width: 100%;
+}
+.footer .contanair .center ul li:hover a {
+    color: white;
+    padding-left: 20px;
+}
+.footer .contanair .center ul li { 
+    margin: 40px auto;
+    text-align: center;
+}
+.footer .contanair .center ul li a { 
+    font-size: 20px;
+    color: rgb(205, 203, 203);
+    transition: var(--main-transition);
+    position: relative;
+}
+.footer .contanair .center ul li a::before { 
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-color: transparent transparent transparent var(--main-color);
+    border-width: 15px;
+    border-style: solid;
+    transition: var(--main-transition);
+}
+.footer .contanair .center ul li a:hover::before { 
+    left: -10px;
+}
+.footer .contanair .right { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.footer .contanair .right .up {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+.footer .contanair .right .up i { 
+    font-size: 54px;
+    color: var(--main-color);
+}
+.footer .contanair .right .up p { 
+    flex: 1 ;
+}
+/* End Footer */
 /* Start Animation */
 @keyframes upanddown {
     to {
