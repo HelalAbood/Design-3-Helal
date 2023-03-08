@@ -1586,9 +1586,9 @@ section.stats h2 {
     color: white;
     min-height: 335px;
     display: flex;
-    display: flex;
     flex-wrap: wrap;
     align-items: center; 
+    align-content: center;
 }
 .footer .colholder .three .box {
     display: flex;
