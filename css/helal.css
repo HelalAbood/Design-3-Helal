@@ -1237,9 +1237,8 @@ section.video {
     padding: 20px;
 }
 .video .contanier .holder { 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 2fr));
-    grid-gap: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .video .contanier .holder .col h3 { 
     font-size: 27px;
@@ -1251,7 +1250,7 @@ section.video {
 }
 @media (max-width: 992px) { 
     .video .contanier .holder { 
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        flex-direction: column;
     }
 }
 .video .contanier .holder .col h3 i { 
@@ -1292,17 +1291,18 @@ top: 0;
     font-size: 14px;
 }
 .video .contanier .holder .rigg { 
+    flex: 1;
     background-color: rgba(220, 220, 220, 0.726);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+.video .contanier .holder .rigg img { 
+    width: 100%;
+}
 @media (max-width: 992px) { 
-    .video .contanier .holder .rigg { 
-        max-width: 390px;
-    }
-    .video .contanier .holder .rigg img { 
-        max-width: 390px;
+    .video .contanier .holder .rigg {
+        margin-top: 15px;
     }
 }
 .video .contanier .holder .text { 
